@@ -43,9 +43,11 @@ namespace burgershack_winter20
 
       services.AddTransient<BurgerService>();
       services.AddTransient<DrinkService>();
+       services.AddTransient<SideService>();
 
       services.AddTransient<BurgerRepository>();
       services.AddTransient<DrinkRepository>();
+      services.AddTransient<SideRepository>();
 
 
     }

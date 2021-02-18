@@ -1,6 +1,6 @@
 USE justincarpenter;
 
--- CREATE TABLE drinks
+-- CREATE TABLE sides
 -- (
 --   id INT AUTO_INCREMENT,
 --   name VARCHAR(255) NOT NULL UNIQUE,
@@ -13,10 +13,10 @@ USE justincarpenter;
 -- DECIMAL( NUMS , NUMSPASTDEC)
 
 -- CREATE
--- INSERT INTO drinks
+-- INSERT INTO sides
 -- (name, description, price)
 -- VALUES
--- ("fanta", "Its orange I think", 15.60);
+-- ("mac and cheese", "cheesy", 99.87);
 
 
 /* Find All of Collection */
