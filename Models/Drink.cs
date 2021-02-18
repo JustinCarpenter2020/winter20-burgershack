@@ -4,7 +4,7 @@ namespace winter20_burgershack.Models
 {
     public class Drink
     {
-    public Drink(int price, string name, string description)
+    public Drink(double price, string name, string description)
     {
       Price = price;
       Name = name;
@@ -17,7 +17,7 @@ namespace winter20_burgershack.Models
 
         public int Id { get; set; }
          [Required]
-    public int Price { get; set; }
+    public double Price { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         

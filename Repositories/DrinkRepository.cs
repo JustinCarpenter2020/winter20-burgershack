@@ -30,7 +30,15 @@ namespace winter20_burgershack.Repositories
 
     internal object CreateDrink(Drink newDrink)
     {
-      throw new NotImplementedException();
+      string sql = @"
+      INSERT INTO drinks
+      (name, description, price)
+      VALUES
+      (@name, @description, @price);
+      SELECT LAST_INSERTED_ID();";
+      int id = _db.ExecuteScalar<int>(sql, newDrink);
+      newDrink.Id = id;
+      return newDrink; 
     }
 
     internal object EditDrink(Drink original)
