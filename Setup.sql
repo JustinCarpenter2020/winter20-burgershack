@@ -1,4 +1,4 @@
-USE goodburger;
+USE justincarpenter;
 
 -- CREATE TABLE burgers
 -- (
