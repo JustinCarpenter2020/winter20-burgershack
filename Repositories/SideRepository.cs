@@ -41,7 +41,14 @@ namespace winter20_burgershack.Repositories
 
     internal object Edit(Side original)
     {
-      throw new NotImplementedException();
+      string sql = @"
+      UPDATE Sides
+      SET
+      description = @Description,
+            price = @Price
+        WHERE id = @Id;
+        SELECT * FROM Sides WHERE id =@Id;";
+        return _db.QueryFirstOrDefault<Side>(sql, original);
     }
 
     internal void Delete(Side side)
