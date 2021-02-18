@@ -28,7 +28,15 @@ namespace winter20_burgershack.Repositories
 
     internal object CreateSide(Side newSide)
     {
-      throw new NotImplementedException();
+      string sql = @"
+      INSERT INTO Sides
+      (name, description, price)
+      VALUES
+      (@name, @description, @price);
+      SELECT LAST_INSERT_ID();";
+      int id = _db.ExecuteScalar<int>(sql, newSide);
+      newSide.Id = id;
+      return newSide;
     }
 
     internal object Edit(Side original)
