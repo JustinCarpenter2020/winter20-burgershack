@@ -58,11 +58,12 @@ namespace winter20_burgershack.Controllers
         }
 
         [HttpPut("{sideId}")]
-        public ActionResult<Side> EditSide(int sideId)
+        public ActionResult<Side> EditSide([FromBody] Side newSide, int sideId)
         {
             try
             {
-                return Ok(_ss.EditSide(sideId));
+                newSide.Id = sideId;
+                return Ok(_ss.EditSide(newSide));
             }
             catch (System.Exception err)
             {
