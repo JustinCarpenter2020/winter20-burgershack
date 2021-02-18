@@ -23,7 +23,9 @@ namespace winter20_burgershack.Repositories
 
     internal Drink GetById(int drinkId)
     {
-      throw new NotImplementedException();
+      string sql = "SELECT * FROM Drinks WHERE id = @drinkId;";
+       return _db.QueryFirstOrDefault<Drink>(sql, new { drinkId });
+
     }
 
     internal object CreateDrink(Drink newDrink)
