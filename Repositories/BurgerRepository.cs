@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using burgershack_winter20.Models;
+using winter20_burgershack.Models;
 using Dapper;
 
-namespace burgershack_winter20.Repositories
+namespace winter20_burgershack.Repositories
 {
   public class BurgerRepository
   {

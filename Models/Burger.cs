@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace burgershack_winter20.Models
+namespace winter20_burgershack.Models
 {
   public class Burger
   {

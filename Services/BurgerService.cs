@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
-using burgershack_winter20.FakeDB;
-using burgershack_winter20.Models;
-using burgershack_winter20.Repositories;
+using winter20_burgershack.Models;
+using winter20_burgershack.Repositories;
 
-namespace burgershack_winter20.Services
+namespace winter20_burgershack.Services
 {
   public class BurgerService
   {

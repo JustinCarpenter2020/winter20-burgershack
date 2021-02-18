@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using burgershack_winter20.Models;
-using burgershack_winter20.Services;
+using winter20_burgershack.Models;
+using winter20_burgershack.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace burgershack_winter20.Controllers
+namespace winter20_burgershack.Controllers
 {
   [ApiController]
   [Route("api/[controller]")]
