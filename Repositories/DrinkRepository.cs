@@ -43,7 +43,14 @@ namespace winter20_burgershack.Repositories
 
     internal object EditDrink(Drink original)
     {
-      throw new NotImplementedException();
+      string sql = @"
+        UPDATE drinks
+        SET
+            description = @Description,
+            price = @Price
+        WHERE id = @Id;
+        SELECT * FROM drinks WHERE id = @Id;";
+      return _db.QueryFirstOrDefault<Drink>(sql, original);
     }
 
     internal void DeleteDrink(Drink drink)
