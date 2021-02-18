@@ -48,7 +48,8 @@ namespace winter20_burgershack.Repositories
 
     internal void DeleteDrink(Drink drink)
     {
-      throw new NotImplementedException();
+       string sql = "DELETE FROM drinks WHERE id = @Id";
+      _db.Execute(sql, drink);
     }
   }
 
