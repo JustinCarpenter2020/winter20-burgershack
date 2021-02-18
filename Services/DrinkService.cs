@@ -13,30 +13,43 @@ namespace winter20_burgershack.Services
     {
       _repo = repo;
     }
-    
+
     internal IEnumerable<Drink> Get()
     {
-      throw new NotImplementedException();
+      return _repo.GetAll();
     }
 
     internal Drink GetDrinkById(int drinkId)
     {
-      throw new NotImplementedException();
+      Drink drink = _repo.GetById(drinkId);
+      if(drink != null)
+      {
+          return drink;
+      }
+       throw new Exception("invalid Id");
     }
 
     internal object CreateDrink(Drink newDrink)
     {
-      throw new NotImplementedException();
+      return _repo.CreateDrink(newDrink);
     }
 
     internal object EditDrink(Drink updatedDrink)
     {
-        throw new NotImplementedException();
+        Drink original = GetDrinkById(updatedDrink.Id);
+        original.Name = updatedDrink.Name != null ? updatedDrink.Name : original.Name;
+      original.Description = updatedDrink.Description != null ? updatedDrink.Description : original.Description;
+      original.Price = updatedDrink.Price > 0 ? updatedDrink.Price : original.Price;
+
+      return _repo.EditDrink(original);
+
     }
 
     internal string Delete(int drinkId)
     {
-         throw new NotImplementedException();
+         Drink drink = GetDrinkById(drinkId);
+         _repo.DeleteDrink(drink);
+         return "Deleted";
     }
 
 
