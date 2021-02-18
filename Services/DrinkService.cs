@@ -1,11 +1,19 @@
 using System;
 using System.Collections.Generic;
 using winter20_burgershack.Models;
+using winter20_burgershack.Repositories;
 
 namespace winter20_burgershack.Services
 {
   public class DrinkService
   {
+       private readonly DrinkRepository _repo;
+
+    public DrinkService(DrinkRepository repo)
+    {
+      _repo = repo;
+    }
+    
     internal IEnumerable<Drink> Get()
     {
       throw new NotImplementedException();
