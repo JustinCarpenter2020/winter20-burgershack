@@ -35,7 +35,7 @@ namespace winter20_burgershack.Repositories
       (name, description, price)
       VALUES
       (@name, @description, @price);
-      SELECT LAST_INSERTED_ID();";
+      SELECT LAST_INSERT_ID();";
       int id = _db.ExecuteScalar<int>(sql, newDrink);
       newDrink.Id = id;
       return newDrink; 
