@@ -46,7 +46,8 @@ namespace winter20_burgershack.Repositories
 
     internal void Delete(Side side)
     {
-      throw new NotImplementedException();
+      string sql = "DELETE FROM Sides WHERE id = @Id;";
+      _db.Execute(sql, side);
     }
   }
 }
