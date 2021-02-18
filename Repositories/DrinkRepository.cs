@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using Dapper;
 using winter20_burgershack.Models;
 
 namespace winter20_burgershack.Repositories
@@ -16,7 +17,8 @@ namespace winter20_burgershack.Repositories
 
     internal IEnumerable<Drink> GetAll()
     {
-      throw new NotImplementedException();
+      string sql = "SELECT * FROM Drinks;";
+      return _db.Query<Drink>(sql);
     }
 
     internal Drink GetById(int drinkId)

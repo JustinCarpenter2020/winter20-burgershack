@@ -10,6 +10,10 @@ namespace winter20_burgershack.Models
       Name = name;
       Description = description;
     }
+     public Drink()
+    {
+
+    }
 
         public int Id { get; set; }
          [Required]
