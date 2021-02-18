@@ -7,6 +7,7 @@ namespace winter20_burgershack.Services
 {
   public class SideService
   {
+      
       private readonly SideRepository _repo;
       public SideService(SideRepository repo)
       {

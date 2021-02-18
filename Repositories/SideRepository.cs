@@ -1,14 +1,23 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
+using Dapper;
 using winter20_burgershack.Models;
 
 namespace winter20_burgershack.Repositories
 {
   public class SideRepository
   {
+      public readonly IDbConnection _db;
+
+    public SideRepository(IDbConnection db)
+    {
+      _db = db;
+    }
     internal IEnumerable<Side> GetAll()
     {
-      throw new NotImplementedException();
+      string sql = "SELECT * FROM Sides;";
+      return _db.Query<Side>(sql);
     }
 
     internal Side GetSideById(int sideId)

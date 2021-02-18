@@ -4,6 +4,10 @@ namespace winter20_burgershack.Models
 {
     public class Side
     {
+     public Side ()
+    {
+
+    }
     public Side(double price, string name, string description)
     {
       Price = price;
