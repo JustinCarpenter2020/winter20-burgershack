@@ -22,7 +22,8 @@ namespace winter20_burgershack.Repositories
 
     internal Side GetSideById(int sideId)
     {
-      throw new NotImplementedException();
+      string sql = "SELECT * FROM Sides WHERE id = @sideId;";
+      return _db.QueryFirstOrDefault<Side>(sql, new {sideId});
     }
 
     internal object CreateSide(Side newSide)
